@@ -1,0 +1,22 @@
+﻿/*Dashboard main screen task list*/
+#ActiveOrders .todo-item span {
+    font-size: 20px !important;
+}
+/*invoice styling*/
+#Add .card-white {
+    height: 320px;
+}
+
+@media(min-width: 776px) {
+    #OrderModal .modal-dialog{
+        max-width:800px;
+    }
+    }
+}
+/*xs screen*/
+@media(max-width: 575px) {
+    /*invoice styling*/
+    #Add .card-white {
+        height: auto;
+    }
+}

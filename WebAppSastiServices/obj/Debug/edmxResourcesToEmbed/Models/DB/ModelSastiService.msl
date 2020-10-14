@@ -1,0 +1,283 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="SastaServicesDBModelStoreContainer" CdmEntityContainer="SastaServicesDBEntities">
+    <FunctionImportMapping FunctionImportName="ReportInvoice" FunctionName="SastaServicesDBModel.Store.ReportInvoice">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SastaServicesDBModel.ReportInvoice_Result">
+          <ScalarProperty Name="OrderId" ColumnName="OrderId" />
+          <ScalarProperty Name="CustomerName" ColumnName="CustomerName" />
+          <ScalarProperty Name="Contact" ColumnName="Contact" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="ServiceTypeName" ColumnName="ServiceTypeName" />
+          <ScalarProperty Name="options" ColumnName="options" />
+          <ScalarProperty Name="options1" ColumnName="options1" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="QTY" ColumnName="QTY" />
+          <ScalarProperty Name="Rate" ColumnName="Rate" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="STPBanners">
+      <EntityTypeMapping TypeName="SastaServicesDBModel.STPBanner">
+        <MappingFragment StoreEntitySet="STPBanner">
+          <ScalarProperty Name="createdDateTime" ColumnName="createdDateTime" />
+          <ScalarProperty Name="ImageFilePath4" ColumnName="ImageFilePath4" />
+          <ScalarProperty Name="ImageFilePath3" ColumnName="ImageFilePath3" />
+          <ScalarProperty Name="ImageFilePath2" ColumnName="ImageFilePath2" />
+          <ScalarProperty Name="ImageFilePath1" ColumnName="ImageFilePath1" />
+          <ScalarProperty Name="IsAvailable" ColumnName="IsAvailable" />
+          <ScalarProperty Name="BannerDetails" ColumnName="BannerDetails" />
+          <ScalarProperty Name="BannerName" ColumnName="BannerName" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="STPBannerOffers">
+      <EntityTypeMapping TypeName="SastaServicesDBModel.STPBannerOffer">
+        <MappingFragment StoreEntitySet="STPBannerOffers">
+          <ScalarProperty Name="ImageFilePath" ColumnName="ImageFilePath" />
+          <ScalarProperty Name="ShortDescriptionAfter" ColumnName="ShortDescriptionAfter" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="DiscoutRate" ColumnName="DiscoutRate" />
+          <ScalarProperty Name="MainHeading" ColumnName="MainHeading" />
+          <ScalarProperty Name="ShortDescriptionBefore" ColumnName="ShortDescriptionBefore" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="STPOrders">
+      <EntityTypeMapping TypeName="SastaServicesDBModel.STPOrder">
+        <MappingFragment StoreEntitySet="STPOrders">
+          <ScalarProperty Name="STPStatusID" ColumnName="STPStatusID" />
+          <ScalarProperty Name="createdDateTime" ColumnName="createdDateTime" />
+          <ScalarProperty Name="PrefferedTimeID" ColumnName="PrefferedTimeID" />
+          <ScalarProperty Name="PrefferedDate" ColumnName="PrefferedDate" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="STPServicesUnitTypesID" ColumnName="STPServicesUnitTypesID" />
+          <ScalarProperty Name="STPServicesFuelTypesID" ColumnName="STPServicesFuelTypesID" />
+          <ScalarProperty Name="STPServiceTypeID" ColumnName="STPServiceTypeID" />
+          <ScalarProperty Name="Contact" ColumnName="Contact" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="STPPrefferedTimes">
+      <EntityTypeMapping TypeName="SastaServicesDBModel.STPPrefferedTime">
+        <MappingFragment StoreEntitySet="STPPrefferedTime">
+          <ScalarProperty Name="TimeRange" ColumnName="TimeRange" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="STPProductBrands">
+      <EntityTypeMapping TypeName="SastaServicesDBModel.STPProductBrand">
+        <MappingFragment StoreEntitySet="STPProductBrand">
+          <ScalarProperty Name="STPProductTypeID" ColumnName="STPProductTypeID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="STPProductTypes">
+      <EntityTypeMapping TypeName="SastaServicesDBModel.STPProductType">
+        <MappingFragment StoreEntitySet="STPProductType">
+          <ScalarProperty Name="ProductTypeDescription" ColumnName="ProductTypeDescription" />
+          <ScalarProperty Name="ProductTypeName" ColumnName="ProductTypeName" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="STPQuickCalls">
+      <EntityTypeMapping TypeName="SastaServicesDBModel.STPQuickCall">
+        <MappingFragment StoreEntitySet="STPQuickCall">
+          <ScalarProperty Name="createdDateTime" ColumnName="createdDateTime" />
+          <ScalarProperty Name="Contact" ColumnName="Contact" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="STPServiceProductItems">
+      <EntityTypeMapping TypeName="SastaServicesDBModel.STPServiceProductItem">
+        <MappingFragment StoreEntitySet="STPServiceProductItems">
+          <ScalarProperty Name="UnitTypeId" ColumnName="UnitTypeId" />
+          <ScalarProperty Name="FuelTypeId" ColumnName="FuelTypeId" />
+          <ScalarProperty Name="SellingPrice" ColumnName="SellingPrice" />
+          <ScalarProperty Name="CostPrice" ColumnName="CostPrice" />
+          <ScalarProperty Name="ImageFilePath" ColumnName="ImageFilePath" />
+          <ScalarProperty Name="CreatedDateTime" ColumnName="CreatedDateTime" />
+          <ScalarProperty Name="IsAvailible" ColumnName="IsAvailible" />
+          <ScalarProperty Name="STPProductBrandID" ColumnName="STPProductBrandID" />
+          <ScalarProperty Name="ServiceProductDescription" ColumnName="ServiceProductDescription" />
+          <ScalarProperty Name="ServiceModelNo" ColumnName="ServiceModelNo" />
+          <ScalarProperty Name="ServiceProductName" ColumnName="ServiceProductName" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="STPServices">
+      <EntityTypeMapping TypeName="SastaServicesDBModel.STPService">
+        <MappingFragment StoreEntitySet="STPServices">
+          <ScalarProperty Name="ServiceRate" ColumnName="ServiceRate" />
+          <ScalarProperty Name="UnitTypeId" ColumnName="UnitTypeId" />
+          <ScalarProperty Name="FuelTypeId" ColumnName="FuelTypeId" />
+          <ScalarProperty Name="CreatedDateTime" ColumnName="CreatedDateTime" />
+          <ScalarProperty Name="IsAvailible" ColumnName="IsAvailible" />
+          <ScalarProperty Name="STPServiceTypeID" ColumnName="STPServiceTypeID" />
+          <ScalarProperty Name="ServiceDescrption" ColumnName="ServiceDescrption" />
+          <ScalarProperty Name="ServiceName" ColumnName="ServiceName" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="STPServicesFuelTypes">
+      <EntityTypeMapping TypeName="SastaServicesDBModel.STPServicesFuelType">
+        <MappingFragment StoreEntitySet="STPServicesFuelTypes">
+          <ScalarProperty Name="Options" ColumnName="Options" />
+          <ScalarProperty Name="Label" ColumnName="Label" />
+          <ScalarProperty Name="STPServiceTypeID" ColumnName="STPServiceTypeID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="STPServicesUnitTypes">
+      <EntityTypeMapping TypeName="SastaServicesDBModel.STPServicesUnitType">
+        <MappingFragment StoreEntitySet="STPServicesUnitTypes">
+          <ScalarProperty Name="STPServiceTypeID" ColumnName="STPServiceTypeID" />
+          <ScalarProperty Name="Options" ColumnName="Options" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="STPServiceTypes">
+      <EntityTypeMapping TypeName="SastaServicesDBModel.STPServiceType">
+        <MappingFragment StoreEntitySet="STPServiceType">
+          <ScalarProperty Name="ImageFilePath" ColumnName="ImageFilePath" />
+          <ScalarProperty Name="IsAvailible" ColumnName="IsAvailible" />
+          <ScalarProperty Name="Datetime" ColumnName="Datetime" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="ServiceTypeName" ColumnName="ServiceTypeName" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="STPStatus">
+      <EntityTypeMapping TypeName="SastaServicesDBModel.STPStatu">
+        <MappingFragment StoreEntitySet="STPStatus">
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="STPStatusTypeID" ColumnName="STPStatusTypeID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="STPStatusTypes">
+      <EntityTypeMapping TypeName="SastaServicesDBModel.STPStatusType">
+        <MappingFragment StoreEntitySet="STPStatusType">
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="StpUsers">
+      <EntityTypeMapping TypeName="SastaServicesDBModel.StpUser">
+        <MappingFragment StoreEntitySet="StpUser">
+          <ScalarProperty Name="STPUserTypeID" ColumnName="STPUserTypeID" />
+          <ScalarProperty Name="ResetPasswordCode" ColumnName="ResetPasswordCode" />
+          <ScalarProperty Name="ActivationCode" ColumnName="ActivationCode" />
+          <ScalarProperty Name="IsEmailActive" ColumnName="IsEmailActive" />
+          <ScalarProperty Name="IsEmailVerified" ColumnName="IsEmailVerified" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Contact" ColumnName="Contact" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="EmailID" ColumnName="EmailID" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="StpUserTypes">
+      <EntityTypeMapping TypeName="SastaServicesDBModel.StpUserType">
+        <MappingFragment StoreEntitySet="StpUserType">
+          <ScalarProperty Name="UserType" ColumnName="UserType" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="SastaServicesDBModel.sysdiagram">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="definition" ColumnName="definition" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TRNCustomerOrders">
+      <EntityTypeMapping TypeName="SastaServicesDBModel.TRNCustomerOrder">
+        <MappingFragment StoreEntitySet="TRNCustomerOrders">
+          <ScalarProperty Name="CreateOn" ColumnName="CreateOn" />
+          <ScalarProperty Name="OrderStatusId" ColumnName="OrderStatusId" />
+          <ScalarProperty Name="UnitTypeId" ColumnName="UnitTypeId" />
+          <ScalarProperty Name="FuelTypeId" ColumnName="FuelTypeId" />
+          <ScalarProperty Name="ServiceTypeId" ColumnName="ServiceTypeId" />
+          <ScalarProperty Name="preferredTimeID" ColumnName="preferredTimeID" />
+          <ScalarProperty Name="preferredDate" ColumnName="preferredDate" />
+          <ScalarProperty Name="OrderDescription" ColumnName="OrderDescription" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Contact" ColumnName="Contact" />
+          <ScalarProperty Name="CustomerName" ColumnName="CustomerName" />
+          <ScalarProperty Name="OrderId" ColumnName="OrderId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TRNCustomerOrders_STPProductItems">
+      <EntityTypeMapping TypeName="SastaServicesDBModel.TRNCustomerOrders_STPProductItems">
+        <MappingFragment StoreEntitySet="TRNCustomerOrders_STPProductItems">
+          <ScalarProperty Name="STPProductItemsID" ColumnName="STPProductItemsID" />
+          <ScalarProperty Name="TRNCustomerOrderID" ColumnName="TRNCustomerOrderID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TRNCustomerOrders_STPServices">
+      <EntityTypeMapping TypeName="SastaServicesDBModel.TRNCustomerOrders_STPServices">
+        <MappingFragment StoreEntitySet="TRNCustomerOrders_STPServices">
+          <ScalarProperty Name="STPServicesID" ColumnName="STPServicesID" />
+          <ScalarProperty Name="TRNCustomerOrderID" ColumnName="TRNCustomerOrderID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TRNInvoices">
+      <EntityTypeMapping TypeName="SastaServicesDBModel.TRNInvoice">
+        <MappingFragment StoreEntitySet="TRNInvoice">
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="QTY" ColumnName="QTY" />
+          <ScalarProperty Name="Rate" ColumnName="Rate" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="STPOrdersID" ColumnName="STPOrdersID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TRNSubscriptions">
+      <EntityTypeMapping TypeName="SastaServicesDBModel.TRNSubscription">
+        <MappingFragment StoreEntitySet="TRNSubscription">
+          <ScalarProperty Name="ImageFilePath" ColumnName="ImageFilePath" />
+          <ScalarProperty Name="SubscriptionDetails" ColumnName="SubscriptionDetails" />
+          <ScalarProperty Name="SubscriptionCost" ColumnName="SubscriptionCost" />
+          <ScalarProperty Name="SubscriptionName" ColumnName="SubscriptionName" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
