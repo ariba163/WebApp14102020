@@ -188,7 +188,6 @@
                 "beforeSend": function () { $('#ajax-loader').show() },
                 "complete": function () { $('#ajax-loader').hide() },
                 success: function (orders) {
-                    console.log(orders);
 
                     orders.map((item, index) => {
 
@@ -200,7 +199,10 @@
                             item.btns
                         ]).draw(false);
                     });
-                    
+                    //setInterval(function () {
+                    // console.log("Testing");
+                    //Table.ajax.reload();
+                    //}, 30000 );
                 },
                 error: function (xhr, status) {
                     console.log(xhr, status);
@@ -208,9 +210,16 @@
             });
 
 
-
-             });
+            
+        //setInterval(function () {
+        //    console.log("Testing");
+        //    $("#Orders").DataTable() = "";
+        //        $("#Orders").DataTable().ajax.reload();
+        //}, 3000);
+                         });
         
+
+
             function OpenDetailForm(ID) {
 
             var $buttonClicked = $(this);

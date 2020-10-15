@@ -105,7 +105,7 @@ namespace WebAppSastiServices.Controllers
                               preferredDate = o.preferredDate.ToString(),
                               status = st.Description,
                               btns = " <div class='btn-group' role='group'><a type='button' class='btn btn-success text-light' onclick=AvailOrder(" + o.OrderId + ") id='Avail'>Avail Order</a>" +
-                                     "<a type='button' class='btn btn-secondary text-light' onclick=OpenDetailForm(" + o.OrderId + ") id='Avail'>Details</a></div>"
+                                     "<a type='button' class='btn btn-secondary text-light' onclick=OpenDetailForm(" + o.OrderId + ") id='Details'>Details</a></div>"
 
                           }).
                           ToList();
@@ -113,6 +113,43 @@ namespace WebAppSastiServices.Controllers
 
             return Json(result, JsonRequestBehavior.AllowGet);
         }
+
+        public ActionResult ACAvailedOrder()
+        {
+            return View();
+        }
+
+        public ActionResult ACAvailedOrdersData()
+        {
+
+            db.Configuration.ProxyCreationEnabled = false;
+
+            var result = (from o in db.TRNCustomerOrders
+                          join t in db.STPPrefferedTimes on o.preferredTimeID equals t.ID
+                          join s in db.STPServiceTypes on o.ServiceTypeId equals s.ID
+                          join st in db.STPStatus on o.OrderStatusId equals st.ID
+                          where (s.ServiceTypeName == "Air Condition" && o.STPStatu.Description == "Availed")
+                          select new
+                          {
+                              OrderId = o.OrderId,
+                              CustomerName = o.CustomerName,
+                              Contact = o.Contact,
+                              Address = o.Address,
+                              Description = s.ServiceTypeName,
+                              TimeRange = t.TimeRange,
+                              preferredDate = o.preferredDate.ToString(),
+                              status = st.Description,
+                              btns = " <div class='btn-group' role='group'><a type='button' class='btn btn-secondary text-light' onclick=OpenDetailForm(" + o.OrderId + ") id='Detail'><i class='fas fa-info-circle'></i> </a></div>"
+
+                          }).
+                          ToList();
+
+
+            return Json(result, JsonRequestBehavior.AllowGet);
+
+
+        }
+
 
 
         public ActionResult AvailOrder(int? ID)

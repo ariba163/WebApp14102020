@@ -18,6 +18,40 @@ namespace WebAppSastiServices.Controllers
         {
             return View();
         }
+        public ActionResult AvailedOrders()
+        {
+
+            return View();
+        }
+
+
+        public ActionResult AvailedOrdersData()
+        {
+
+            var result = (from o in db.TRNCustomerOrders
+                          join t in db.STPPrefferedTimes on o.preferredTimeID equals t.ID
+                          join s in db.STPServiceTypes on o.ServiceTypeId equals s.ID
+                          join st in db.STPStatus on o.OrderStatusId equals st.ID
+                          where (o.STPStatu.Description=="Availed")
+                          select new
+                          {
+                              OrderId = o.OrderId,
+                              CustomerName = o.CustomerName,
+                              Contact = o.Contact,
+                              Address = o.Address,
+                              Description = s.ServiceTypeName,
+                              TimeRange = t.TimeRange,
+                              preferredDate = o.preferredDate.ToString(),
+                              status = st.Description,
+                              CreateOn = o.CreateOn.ToString(),
+                              btns = " <div class='btn-group' role='group'><a type='button' class='btn btn-secondary text-light' onclick=Invoice(" + o.OrderId + ") id='Invoice'> Invoice </a></div>"
+
+                          }).ToList();
+
+
+            return Json(result, JsonRequestBehavior.AllowGet);
+
+        }
 
         public ActionResult LatestActOrders()
         {
@@ -53,8 +87,6 @@ namespace WebAppSastiServices.Controllers
 
             return Json(result, JsonRequestBehavior.AllowGet);
         }
-
-
 
         public ActionResult OrderDetails(int? ID)
         {

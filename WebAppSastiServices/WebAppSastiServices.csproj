@@ -1000,6 +1000,8 @@
     <Content Include="Views\AdminDashboard\OrderDelete.cshtml" />
     <Content Include="Views\AdminDashboard\OrderEdit.cshtml" />
     <Content Include="Views\VendorDashboard\AvailOrder.cshtml" />
+    <Content Include="Views\AdminDashboard\AvailedOrders.cshtml" />
+    <Content Include="Views\VendorDashboard\ACAvailedOrder.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
